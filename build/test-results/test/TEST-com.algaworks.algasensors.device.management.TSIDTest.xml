@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.algaworks.algasensors.device.management.TSIDTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-27T13:21:07.427Z" hostname="SEG-LESLEY" time="0.102">
+  <properties/>
+  <testcase name="shouldGenerateTSID()" classname="com.algaworks.algasensors.device.management.TSIDTest" time="0.102"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

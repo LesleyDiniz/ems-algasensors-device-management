@@ -7,5 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.18.36" level="project" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.18.36" level="project" />
+    <orderEntry type="library" name="Gradle: io.hypersistence:hypersistence-tsid:2.1.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-web:6.2.5" level="project" />
   </component>
 </module>
