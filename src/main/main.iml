@@ -11,5 +11,8 @@
     <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.18.36" level="project" />
     <orderEntry type="library" name="Gradle: io.hypersistence:hypersistence-tsid:2.1.4" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-web:6.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.18.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.18.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.18.3" level="project" />
   </component>
 </module>
