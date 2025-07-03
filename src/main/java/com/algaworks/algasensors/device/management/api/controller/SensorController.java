@@ -8,6 +8,7 @@ import com.algaworks.algasensors.device.management.domain.model.SensorId;
 import com.algaworks.algasensors.device.management.domain.repository.SensorRepository;
 import io.hypersistence.tsid.TSID;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -36,6 +37,24 @@ public class SensorController {
         return convertToModel(sensor);
     }
 
+    @DeleteMapping("{sensorId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteSensor(@PathVariable TSID sensorId){
+        Sensor sensor = sensorRepository.findById(new SensorId(sensorId))
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        sensorRepository.delete(sensor);
+    }
+
+    @PutMapping("{sensorId}")
+    public SensorOutput updateSensor(@PathVariable TSID sensorId, @RequestBody SensorInput input){
+        Sensor sensor = sensorRepository.findById(new SensorId(sensorId))
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        BeanUtils.copyProperties(input, sensor, "id");
+        sensor = sensorRepository.save(sensor);
+
+        return convertToModel(sensor);
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
